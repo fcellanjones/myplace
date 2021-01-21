@@ -1,0 +1,10 @@
+<%= simple_form_for @workspace do |f| %>
+<%= f.input :name %>
+<%= f.input :description %>
+<%= f.input :capacity %>
+<%= f.input :price %>
+<%= f.input :first_line_address %>
+<%= f.input :city %>
+<%= f.input :postcode %>
+  <%= f.button :submit, class: "btn btn-info" %>
+<% end %>
