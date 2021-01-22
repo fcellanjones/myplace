@@ -1,7 +1,74 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
-  <div class="container">
-    <div class="banner-text">
-      <h1>Find a workspace in your local area!</h1>
+<div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+  <div class="banner-text">
+      <h3>Find a workspace in your local area!</h3>
+  </div>
+</div>
+
+<div class="large-card">
+  <h2>Find a great place to work...with the perfect cup of coffee!</h2>
+  <p>Find the perfect place to work within walking distance of your home. A change of scenery can make all the difference!</p>
+  <div class="icons">
+    <div class="icon-row">
+      <div>
+        <i class="fas fa-wifi fa-5x"></i>
+        <p>Speedy Wifi</p>
+      </div>
+      <div>
+        <i class="fas fa-plug fa-5x"></i>
+        <p>Sockets available</p>
+      </div>
+      <div>
+        <i class="fas fa-mug-hot fa-5x"></i>
+        <p>Tea and Coffee provided</p>
+      </div>
+    </div>
+    <div class= "icon-row">
+      <div>
+        <i class="fas fa-hand-holding-heart fa-7x"></i>
+        <p>Safe space</p>
+      </div>
+      <div>
+        <i class="fas fa-volume-mute fa-7x"></i>
+        <p>Quiet spaces</p>
+      </div>
+      <div>
+        <i class="fas fa-laptop-house fa-7x"></i>
+        <p>Screen available</p>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="large-card">
+  <h2>List your workspace!</h2>
+  <p>If you have availability for people to work in your home for a few hours a day, list it with MyPlace and join our community!</p>
+  <div class="image-group">
+    <div class="list-space-image">
+      <img src="https://images.unsplash.com/photo-1544140708-514b7837e6b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="home office">
+    </div>
+    <div class="list-space-image">
+      <img src="https://images.unsplash.com/photo-1486946255434-2466348c2166?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvbWUlMjBvZmZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="home office">
+    </div>
+    <div class="list-space-image">
+      <img src="https://images.unsplash.com/photo-1547043736-b2247cb34b01?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="home office">
+    </div>
+  </div>
+  <%= link_to "List your workspace", new_workspace_path, class: "btn btn-warning" %>
+</div>
+
+<div class="large-card">
+  <h2>Become a business member!</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="small-container">
+      <div class="small-card">
+        <h2>Bronze Membership</h2>
+      </div>
+      <div class="small-card">
+        <h2>Silver Membership</h2>
+      </div>
+      <div class="small-card">
+        <h2>Gold Membership</h2>
+      </div>
+  </div>
+  <%= link_to "Sign up here!", root_path, class: "btn btn-warning" %>
 </div>
