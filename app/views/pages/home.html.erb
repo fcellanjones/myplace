@@ -1,6 +1,11 @@
 <div class="home-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
-  <div class="banner-text">
+  <div class="text-search">
+    <div class="banner-text">
       <h3>Find a workspace in your local area!</h3>
+    </div>
+    <div class="button">
+      <%= link_to 'Search', workspaces_path(@workspaces), class: "btn btn-lg btn-warning" %>
+    </div>
   </div>
 </div>
 
