@@ -1,0 +1,62 @@
+.show-images {
+  display: flex;
+}
+
+.big-image img {
+  padding-top: 10px;
+  height: 450px;
+  width: 800px;
+  object-fit: cover;
+}
+
+.small-images {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 230px;
+    width: 400px;
+    object-fit: cover;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+}
+
+.leftside {
+  height: 100vh;
+  width: 1000px;
+}
+
+.info {
+  display: flex;
+  background-color: white;
+}
+
+.workspace-info h2 {
+  color: #DB6400;
+  font-weight: bolder;
+  font-size: 44px;
+  font-family: "Roboto";
+}
+
+.workspace-info p {
+  font-size: 24px;
+  font-family: "Roboto";
+  color: #56555D;
+}
+
+.price p {
+  width: 100px;
+  height: 100px;
+  line-height: 2.5;
+  border-radius: 50%;
+  background-color: white;
+  color: #007965;
+  border: 2px solid #007965;
+  position: absolute;
+  text-align: center;
+  top: 550px;
+  right: 450px;
+  font-size: 32px;
+}
+
