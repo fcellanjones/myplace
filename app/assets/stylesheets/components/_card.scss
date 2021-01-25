@@ -1,0 +1,94 @@
+.workspace-card {
+  position: relative;
+  width: 330px;
+  height: 380px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+ .workspace-card:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    box-shadow: 2px 2px 2px 2px rgba(219,100,0,0.2);
+    text-decoration: none;
+  }
+
+.workspace-card p {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.workspace-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.workspace-link:hover {
+  text-decoration: none;
+}
+
+.product-cards {
+  position: relative;
+}
+.product-cards p {
+  padding-left: 31px;
+  font-size: 15px;
+}
+
+.workspace-name {
+  color: #DB6400;
+  padding-left: 16px;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+h5 {
+  width: 43px;
+  height: 43px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: #007965;
+  border: 2px solid #007965;
+  position: absolute;
+  text-align: center;
+  top: 178px;
+  right: 14px;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    color: rgba(0,0,0,0.7);
+}
+
+.icon-postcode {
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  color: #DB6400;
+  padding-top: 20px;
+}
+
+.fa-thumbtack:before {
+    font-size: 25px;
+    justify-content: center;
+  }
+
+.address-text {
+  margin-top: 7px;
+  margin-left: 10px;
+  display: flex;
+
+  p {
+    padding: 0px;
+    margin: 0px;
+    color: grey;
+  }
+}

@@ -1,0 +1,25 @@
+.workspaces {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  background-color: #F4F4F4;
+}
+
+.workspaces-leftside {
+  width: 50%;
+  background-color: #F4F4F4;
+}
+
+.workspaces-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.workspaces-rightside {
+  width: 50%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: lightblue;
+  padding-right: 20px;
+}
