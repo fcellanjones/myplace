@@ -35,29 +35,29 @@
             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Amenities</a>
+            <a class="nav-link" id="pills-amenities-tab" data-toggle="pill" href="#pills-amenities" role="tab" aria-controls="pills-amenities" aria-selected="false">Amenities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Reviews</a>
+            <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-selected="false">Reviews</a>
           </li>
         </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> <%= @workspace.description %></div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade" id="pills-amenities" role="tabpanel" aria-labelledby="pills-amenities-tab">...</div>
+            <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
               <% @workspace.reviews.each do |review| %>
                 <li class="list-group-item">
                   <% review.rating.to_i.times do %>
                     <i class="far fa-star"></i>
                   <% end %><br>
                   <%= review.content %><br>
-                  <i><%= review.user.first_name%> - <%= review.created_at.strftime("%A, %b %d") %></i>
+                  <i><%= review.user.email%> - <%= review.created_at.strftime("%A, %b %d") %></i>
                   <% end %>
                 </li>
             </div>
           </div>
       </div>
-     <div>
+     <div class="show-buttons">
           <%= link_to 'Leave a review', new_workspace_review_path(@workspace), class: "btn-edit btn btn-warning "%>
           <% if current_user == @workspace.user %>
           <%= link_to 'Edit', edit_workspace_path(@workspace), class: "btn-edit btn btn-warning"%>

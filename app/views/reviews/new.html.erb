@@ -1,0 +1,11 @@
+<div class="container" style="height: 100vh">
+  <div class="form-container my-5">
+    <h2>Review this space</h2>
+    <%= simple_form_for [ @workspace, @review ] do |f| %>
+    <%= f.input :content, placeholder: "Write your review", class:"label-review" %>
+    <%= f.input :rating,
+                collection: [1, 2, 3, 4, 5], placeholder: "Rate this between 1 and 5" %>
+    <%= f.submit "Submit review", class: "btn-warning btn btn-warning" %>
+    <% end %>
+  </div>
+</div>
