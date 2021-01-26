@@ -14,22 +14,46 @@
       </div>
     </div>
   </div>
-  <div class="leftside">
-    <div class="info">
-      <div class="workspace-info">
-        <h2><%= @workspace.name %></h2>
-        <p> <%= @workspace.city %> <%= @workspace.postcode %> </p>
+  <div class="second-container">
+    <div class="leftside">
+     <div class="info">
+        <div class="workspace-info">
+          <h2><%= @workspace.name %></h2>
+          <p> <%= @workspace.city %> <%= @workspace.postcode %> </p>
         <!-- rating here -->
-      </div>
-      <div class="price">
+          <i class="far fa-star fa-2x"></i><i class="far fa-star fa-2x"></i><i class="far fa-star fa-2x"></i>
+        </div>
+        <div class="price">
           <p>£5<%=@workspace.price %> </p>
+        </div>
+      </div>
+        <div>
+          <%= link_to 'Leave a review', root_path, class: "btn-edit btn btn-warning "%>
+          <% if current_user == @workspace.user %>
+          <%= link_to 'Edit', edit_workspace_path(@workspace), class: "btn-edit btn btn-warning"%>
+          <% end %>
+          <%= link_to 'More Workspaces', workspaces_path(@workspaces), class: "btn-edit btn btn-warning"%>
+        </div>
+    </div>
+
+  <% if current_user != @workspace.user %>
+    <div class="rightside">
+      <div class= "bookingform">
+        <h3>Reserve this space</h3>
+          <%= simple_form_for [@workspace, Booking.new] do |f| %>
+          <%= f.input :person_count %>
+          <%= f.input :start_time, as: :string %>
+          <%= f.input :end_time, as: :string %>
+          </br>
+        <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
+          Total: £0
+        </div>
+        <%= f.submit "", class: "btn btn-warning", id:"book-now", class: "hidden" %>
+        <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
+        <% end %>
       </div>
     </div>
-    <div class = "bottom">
-    </div>
-  </div>
-
-  <div class="rightside">
-
+  <% end %>
   </div>
 </div>
+
