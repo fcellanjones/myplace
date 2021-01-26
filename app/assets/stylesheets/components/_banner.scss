@@ -1,8 +1,14 @@
 .home-banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 100vh;
+  height: 80vh;
+  padding-bottom: 20px;
+
+  img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .banner-text {
@@ -16,4 +22,19 @@
 
 .banner-text h3 {
   font-size: 40px;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.text-search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
