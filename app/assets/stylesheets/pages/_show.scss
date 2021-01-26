@@ -22,14 +22,25 @@
   }
 }
 
-.leftside {
+.second-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-bottom: 30px;
   height: 100vh;
-  width: 1000px;
+}
+
+.leftside {
+  flex-direction: column;
+  width: 820px;
+  padding-right: 16px;
 }
 
 .info {
   display: flex;
   background-color: white;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .workspace-info h2 {
@@ -48,15 +59,38 @@
 .price p {
   width: 100px;
   height: 100px;
-  line-height: 2.5;
+  line-height: 2.8;
   border-radius: 50%;
   background-color: white;
   color: #007965;
   border: 2px solid #007965;
   position: absolute;
   text-align: center;
-  top: 550px;
-  right: 450px;
+  top: 50px;
+  right: 560px;
   font-size: 32px;
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-left: 30px;
+}
+
+.bookingform {
+  width: 300px;
+  height: 400px;
+  margin-right: 35px;
+  font-size: 16px;
+  border: 1px solid #DB6400;
+  border-radius: 3px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px;
 }
 
