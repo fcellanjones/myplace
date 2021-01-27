@@ -61,14 +61,71 @@
   <h2>List your workspace!</h2>
   <p>If you have availability for people to work in your home for a few hours a day, list it with MyPlace and join our community!</p>
   <div class="image-group">
-    <div class="list-space-image">
-      <img src="https://images.unsplash.com/photo-1544140708-514b7837e6b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="home office">
-    </div>
-    <div class="list-space-image">
-      <img src="https://images.unsplash.com/photo-1486946255434-2466348c2166?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvbWUlMjBvZmZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="home office">
-    </div>
-    <div class="list-space-image">
-      <img src="https://images.unsplash.com/photo-1547043736-b2247cb34b01?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="home office">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-images">
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1544140708-514b7837e6b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="First slide">
+              <div class="text-group">
+                <div class="name">Bright home office</div>
+                <div class="location">West London</div>
+              </div>
+            </div>
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1593912583725-5ce92ea9b4bf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fGJlZHJvb20lMjB3aXRoJTIwZGVza3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="First slide">
+              <div class="text-group">
+                <div class="name">Table in spare room</div>
+                <div class="location">South London</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-images">
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGxpdmluZyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Second slide">
+              <div class="text-group">
+                <div class="name">Spacious living room</div>
+                <div class="location">South-West London</div>
+              </div>
+            </div>
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1585634917202-6f03b28fc6d0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjI5fHx3b3JraW5nJTIwZnJvbSUyMGhvbWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="First slide">
+              <div class="text-group">
+                <div class="name">Office in bedroom</div>
+                <div class="location">South London</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-images">
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1599619351208-3e6c839d6828?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE0fHx3b3JraW5nJTIwZnJvbSUyMGhvbWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Second slide">
+              <div class="text-group">
+                <div class="name">Quiet living room</div>
+                <div class="location">East London</div>
+              </div>
+            </div>
+            <div class="image-text">
+              <img class="d-block list-space-image" src="https://images.unsplash.com/photo-1536376072261-38c75010e6c9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8YXBhcnRtZW50fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="First slide">
+              <div class="text-group">
+                <div class="name">Dining table in living room</div>
+                <div class="location">South London</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
   <%= link_to "List your workspace", new_workspace_path, class: "btn btn-warning" %>
