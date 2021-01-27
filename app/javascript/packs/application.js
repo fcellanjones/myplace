@@ -24,11 +24,15 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
+  flatpickr("#booking_start_time", options);
+  flatpickr("#booking_end_time", options);
 });
