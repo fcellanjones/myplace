@@ -1,0 +1,27 @@
+.top-account {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.top-left {
+  padding-top: 20px;
+}
+
+.avatar-large {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.top-right {
+  padding-left: 60px;
+  padding-top: 20px;
+
+  h2 {
+    color: #DB6400;
+  }
+
+  h3 {
+    font-weight: normal;
+  }
+}

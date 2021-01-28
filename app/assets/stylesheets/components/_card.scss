@@ -15,9 +15,19 @@
     text-decoration: none;
   }
 
-.workspace-card p {
+.workspace-card
+
+h4 {
+  font-size: 16px;
+}
+
+p {
   padding-left: 20px;
   padding-top: 20px;
+}
+
+.links {
+  display: flex;
 }
 
 .workspace-card img {
