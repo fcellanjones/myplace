@@ -36,6 +36,7 @@ import { updatePrice } from '../helper_functions/updatePrice';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  updatePrice();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
   flatpickr("#booking_start_time", options);
   flatpickr("#booking_end_time", options);
@@ -47,5 +48,4 @@ document.addEventListener('turbolinks:load', () => {
         submitButton.click();
       });
   initMapbox();
-  updatePrice();
 });
