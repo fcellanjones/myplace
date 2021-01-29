@@ -32,10 +32,12 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { updatePrice } from '../helper_functions/updatePrice';
+import { imageSwapper } from '../helper_functions/imageSwapper';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  imageSwapper();
   updatePrice();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
   flatpickr("#booking_start_time", options);
