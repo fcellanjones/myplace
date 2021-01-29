@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :workspaces do
     resources :bookings, only: [:new, :edit, :show, :create, :update]
   end
-  resources :users, only: [:show, :new, :create, :edit, :update]
   resources :bookings, only: [:delete]
+  resources :users, only: [:show, :new, :create, :edit, :update]
+
   resources :workspaces do
     resources :reviews, only: [:new, :create]
   end
