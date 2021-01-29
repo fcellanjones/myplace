@@ -20,13 +20,12 @@
         <div class="workspace-info">
           <h2><%= @workspace.name %></h2>
           <p> <%= @workspace.city %> <%= @workspace.postcode %> </p>
-        <!-- rating here -->
           <p> <% @workspace.average.floor.times do  %>
               <i class="far fa-star"></i>
             <% end %></p>
         </div>
-        <div class="price">
-          <p>£5<%=@workspace.price %> </p>
+        <div class="price-text" data-rate="<%= @workspace.price %>" id="price">
+            <p>£<%= @workspace.price %></p>
         </div>
       </div>
       <div class="tabs">
@@ -67,23 +66,23 @@
     </div>
 
   <% if current_user != @workspace.user %>
-    <div class="rightside">
-      <div class= "bookingform">
-        <h3>Reserve this space</h3>
+      <div class= "rightside">
+        <div class= "bookingform p-3">
+          <h3>Reserve this space</h3>
           <%= simple_form_for [@workspace, Booking.new] do |f| %>
-          <%= f.input :person_count %>
-          <%= f.input :start_time, as: :string %>
-          <%= f.input :end_time, as: :string %>
-          </br>
-        <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
-          Total: £0
+            <%= f.input :person_count %>
+            <%= f.input :start_time, as: :string %>
+            <%= f.input :end_time, as: :string %>
+            </br>
+                <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
+                  Total: £0
+                </div>
+            <%= f.submit "", class: "btn btn-info", id:"book-now", class: "hidden" %>
+            <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
+          <% end %>
         </div>
-        <%= f.submit "", class: "btn btn-warning", id:"book-now", class: "hidden" %>
-        <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
-        <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
   <div
     id="map"

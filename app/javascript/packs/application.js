@@ -26,9 +26,12 @@ require("channels")
 import "bootstrap";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
+import swal from 'sweetalert';
+import { initSweetalert } from '../plugins/init_sweetalert';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
+import { updatePrice } from '../helper_functions/updatePrice';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -36,5 +39,13 @@ document.addEventListener('turbolinks:load', () => {
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
   flatpickr("#booking_start_time", options);
   flatpickr("#booking_end_time", options);
+  const submitButton = document.getElementById('book-now');
+    initSweetalert('#sweet-alert-demo', {
+        title: "Thank you for your booking",
+        text: "See your booking on your account page",
+      }, (value) => {
+        submitButton.click();
+      });
   initMapbox();
+  updatePrice();
 });

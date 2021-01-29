@@ -51,6 +51,6 @@ class WorkspacesController < ApplicationController
   private
 
   def strong_params
-    params.require(:workspace).permit(:name, :first_address_line, :postcode, :city, :amenities, :capacity, :prices, :description, amenity_ids: [], photos: [])
+    params.require(:workspace).permit(:name, :description, :capacity, :price, :first_line_address, :city, :postcode)
   end
 end
