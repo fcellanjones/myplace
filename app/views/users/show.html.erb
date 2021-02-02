@@ -31,9 +31,9 @@
         </ul>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-bookings" role="tabpanel" aria-labelledby="pills-bookings-tab">
+            <% @bookings.each do |booking| %>
           <div class="workspace-card">
             <img src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxob21lJTIwb2ZmaWNlfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60" alt="airy desk in bedroom">
-            <% @bookings.each do |booking| %>
             <div class="booking-card">
               <h3 class="booking-name"><%= booking.workspace.name %></h3>
               <div class="booking-details">

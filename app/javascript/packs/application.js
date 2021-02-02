@@ -35,10 +35,9 @@ import { updatePrice } from '../helper_functions/updatePrice';
 import { imageSwapper } from '../helper_functions/imageSwapper';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  imageSwapper();
+  initMapbox();
   updatePrice();
+  imageSwapper();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
   flatpickr("#booking_start_time", options);
   flatpickr("#booking_end_time", options);
@@ -49,5 +48,4 @@ document.addEventListener('turbolinks:load', () => {
       }, (value) => {
         submitButton.click();
       });
-  initMapbox();
 });
