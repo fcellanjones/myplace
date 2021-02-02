@@ -1,3 +1,7 @@
+.account {
+  margin: 50px;
+}
+
 .top-account {
   display: flex;
   align-items: flex-start;
@@ -25,10 +29,15 @@
   h3 {
     font-weight: normal;
   }
+}
 
-  p {
-    padding: 0px;
-  }
+#account-tab {
+  width: 100%;
+}
+
+.booking-card {
+  display: flex;
+  width: 100%;
 }
 
 .booking-details {
