@@ -65,7 +65,7 @@
         </div>
     </div>
 
-  <% if current_user != @workspace.user %>
+    <% if current_user != @workspace.user %>
       <div class= "rightside">
         <div class= "bookingform p-3">
           <h3>Reserve this space</h3>
@@ -74,7 +74,7 @@
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
             </br>
-                <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
+                <div class="price-target" data-rate="<%= @workspace.prices %>" id="total-price">
                   Total: £0
                 </div>
             <%= f.submit "", class: "btn btn-info", id:"book-now", class: "hidden" %>
