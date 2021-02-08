@@ -6,9 +6,11 @@
     <%= csp_meta_tag %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+        <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   </head>
 
   <body>
@@ -19,12 +21,5 @@
     <%= render 'shared/footer' %>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js">
-      $(document).ready(function(){
-      $('.your-class').slick({
-      setting-name: setting-value
-  });
-});
-    </script>
   </body>
 </html>
