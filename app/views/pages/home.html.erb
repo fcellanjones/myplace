@@ -26,35 +26,36 @@
   <h2>Find a great place to work...with the perfect cup of coffee!</h2>
   <p>Find the perfect place to work within walking distance of your home. A change of scenery can make all the difference!</p>
   <div class="icons">
-    <div class="icon-row">
-      <div>
+    <div class="row icon-row">
+      <div class="col-lg-4">
         <i class="fas fa-wifi fa-5x"></i>
         <p>Speedy Wifi</p>
       </div>
-      <div>
+      <div class="col-lg-4">
         <i class="fas fa-plug fa-5x"></i>
         <p>Sockets available</p>
       </div>
-      <div>
+      <div class="col-lg-4">
         <i class="fas fa-mug-hot fa-5x"></i>
         <p>Tea and Coffee provided</p>
       </div>
     </div>
-    <div class= "icon-row">
-      <div>
+    <div class="row icon-row">
+      <div class="col-lg-4">
         <i class="fas fa-hand-holding-heart fa-5x"></i>
         <p>Safe space</p>
       </div>
-      <div>
+      <div class="col-lg-4">
         <i class="fas fa-volume-mute fa-5x"></i>
         <p>Quiet spaces</p>
       </div>
-      <div>
+      <div class="col-lg-4">
         <i class="fas fa-laptop-house fa-5x"></i>
         <p>Screen available</p>
       </div>
     </div>
   </div>
+  <%= link_to "Find a workspace", workspaces_path, class: "btn btn-lg btn-warning" %>
 </div>
 
 <div class="large-card">
@@ -128,5 +129,5 @@
       </a>
     </div>
   </div>
-  <%= link_to "List your workspace", new_workspace_path, class: "btn btn-warning" %>
+  <%= link_to "List your workspace", new_workspace_path, class: "btn btn-lg btn-warning" %>
 </div>
