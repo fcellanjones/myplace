@@ -2,6 +2,12 @@ class WorkspacesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
   def index
     @workspaces = Workspace.all
+    if params.dig(:index_search, :search_city).present? && params.dig(:index_search, :search_distance).present?
+      @workspaces = @workspaces.near(params.dig(:index_search, :search_city), params.dig(:index_search, :search_distance), units: :km)
+      if @workspaces.empty?
+        @workspaces = Workspace.search_by_location(params.dig(:index_search, :search_city))
+      end
+    end
 
     @markers = @workspaces.geocoded.map do |workspace|
       {
