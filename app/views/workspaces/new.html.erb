@@ -6,5 +6,12 @@
 <%= f.input :first_line_address %>
 <%= f.input :city %>
 <%= f.input :postcode %>
-  <%= f.button :submit, class: "btn btn-info" %>
+<%= f.association :amenities,
+                          collection: Amenity.all, as: :check_boxes,
+                          wrapper: :vertical_collection_inline,
+                          input_html: { class: "tag-selector" },
+                          item_wrapper_class: 'tag-item'%>
+<%= f.input :photos, as: :file, input_html: { multiple: true }%>
+</br>
+<%= f.button :submit, class: "btn btn-info" %>
 <% end %>

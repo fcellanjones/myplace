@@ -9,6 +9,11 @@ class WorkspacesController < ApplicationController
       end
     end
 
+    amenities = params.dig(:index_search, :amenities)&.reject { |amenity| amenity.blank? }
+    if amenities && amenities.length > 0
+      @workspaces = @workspaces.joins(workspace_amenities: :amenity).where(workspace_amenities: { amenities: { name: amenities } })
+    end
+
     @markers = @workspaces.geocoded.map do |workspace|
       {
         lat: workspace.latitude,
