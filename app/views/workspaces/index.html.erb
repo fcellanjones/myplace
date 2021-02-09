@@ -1,5 +1,23 @@
 <div class="workspaces">
   <div class="workspaces-leftside">
+    <div class="filter-form">
+      <%= simple_form_for :index_search, url: workspaces_path, method: :get, html: { class: 'w-100' } do |f| %>
+      <div class="filter-flex">
+        <div class="filter-left">
+          <div class="form-top">
+            <%= f.input :search_city, class: "form-control rounded-left", placeholder: "Area or Postcode", label: false %>
+            <%= f.input :search_distance, class: "form-control", placeholder: "Km radius", label: false  %>
+          </div>
+          <div class="amenities-line form-inline">
+            <%= f.input :amenities, as: :check_boxes, collection: Amenity.pluck(:name), input_html: { multiple: true }, label: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+          </div>
+        </div>
+        <div>
+          <%= f.submit "Filter", class: "btn btn-info"%>
+        </div>
+      </div>
+    <% end %>
+    </div>
     <div class="workspaces-cards">
       <% @workspaces.each do |workspace| %>
       <%= link_to workspace_path(workspace), class: "workspace-link" do %>
@@ -10,9 +28,9 @@
           <h2 class="workspace-name"><%= workspace.name %></h2>
           <div class= "card-icons">
             <!-- non static amenities here -->
-            <i class="fas fa-wifi fa-2x"></i>
-            <i class="fas fa-hand-holding-heart fa-2x"></i>
-            <i class="fas fa-mug-hot fa-2x"></i>
+            <% workspace.amenities.each do |amenity| %>
+              <%= image_tag amenity_icon(amenity.name), alt: "icons" %>
+            <% end  %>
           </div>
           <div class="icon-postcode">
             <i class="fas fa-thumbtack"></i>
