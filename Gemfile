@@ -30,10 +30,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 #user authentication
 gem 'devise'
+
 # geocordinates for mapping
 gem 'geocoder'
+
 #image storage
 gem 'cloudinary', '~> 1.16.0'
+
+# geo-aware search
+gem "algoliasearch-rails"
+gem 'pg_search', '~> 2.3.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

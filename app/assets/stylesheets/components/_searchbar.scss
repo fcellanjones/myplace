@@ -1,0 +1,40 @@
+.form-line {
+  display: flex;
+}
+
+.index-form {
+  background-color: #FFF;
+  margin: auto;
+  width: 520px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.search-form {
+    width: 100%;
+
+    #index_search_search_city {
+    border: 1px solid white;
+    border-right: 1px solid hsla(0,0%,59.2%,.3);
+    font-size: 18px;
+
+    }
+
+    #index_search_search_distance {
+      border: 1px solid white;
+      font-size: 18px;
+      padding-left: 20px;
+      width: 150px;
+      margin-right: 50px;
+    }
+
+    .btn {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: white;
+      font-size: 20px;
+      border-radius: 15px;
+    }
+  }

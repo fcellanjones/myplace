@@ -7,6 +7,13 @@ class Workspace < ApplicationRecord
   geocoded_by :postcode
   after_validation :geocode, if: :will_save_change_to_postcode?
 
+  include PgSearch::Model
+  pg_search_scope :search_by_location,
+  against: [ :city, :postcode ],
+      using: {
+        tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+
   def average
     reviews.average(:rating).to_f.round(1)
   end
