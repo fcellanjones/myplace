@@ -38,7 +38,7 @@
                   <div class="booking-details">
                     <p><%= booking.start_time.strftime('%a %e %B %l:%M')%> -
                       <%= booking.end_time.strftime('%a %e %B %l:%M')%></p>
-                    <h4><%= booking.person_count %> people</h4>
+                    <p><%= booking.person_count %> people</p>
                   </div>
                   <div class="links">
                     <h4><%= link_to "Get in touch", '#' %></h4>
