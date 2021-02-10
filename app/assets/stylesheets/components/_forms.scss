@@ -1,0 +1,31 @@
+.form-container {
+  margin-top: 20px;
+  width: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+
+  h2 {
+    color: #007965;
+    font-weight: bold;
+  }
+}
+
+.form-inputs {
+  color: #007965;
+}
+
+.form-actions .btn {
+  margin: auto;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: #007965;
+  }
+}
