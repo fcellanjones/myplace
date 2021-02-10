@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :edit, :update]
 
   resources :workspaces do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:new, :create, :edit]
   end
 end

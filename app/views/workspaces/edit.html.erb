@@ -17,11 +17,10 @@
                                 item_wrapper_class: 'tag-item'%>
       <%= f.input :photos, as: :file, input_html: { multiple: true }%>
     </div>
-
-    </br>
     <div class="form-actions">
       <%= f.button :submit, class: "btn btn-warning" %>
-      <% end %>
+      <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
     </div>
+    <% end %>
   </div>
 </div>

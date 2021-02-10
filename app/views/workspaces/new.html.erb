@@ -16,13 +16,12 @@
                                 input_html: { class: "tag-selector" },
                                 item_wrapper_class: 'tag-item'%>
       <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-      <p><%=f.check_box :terms_of_service, required: true %> By ticking this box I understand the tax implications and that I have sought agreement with my landlord or mortgage provider</p>
+      <%=f.check_box :terms_of_service, required: true %> By ticking this box I understand the tax implications and that I have sought agreement with my landlord or mortgage provider
     </div>
-
-    </br>
     <div class="form-actions">
       <%= f.button :submit, class: "btn btn-warning" %>
-      <% end %>
+      <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
     </div>
+    <% end %>
   </div>
 </div>
