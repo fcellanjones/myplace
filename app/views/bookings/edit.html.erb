@@ -1,0 +1,28 @@
+<div class="container" style="width: 500px">
+    <div class="form-container">
+    <h2>Edit your Booking</h2>
+      <div style="display: flex">
+        <h3><%= @booking.workspace.name %></h3>
+        <h4><%= @booking.workspace.first_line_address %>, <%= @booking.workspace.postcode %></h4>
+      </div>
+      <div class="form-inputs">
+        <%= simple_form_for [@workspace, @booking] do |f| %>
+          <%= f.input :person_count %>
+          <%= f.input :start_time %>
+          <%= f.input :end_time %>
+      </div>
+      </br>
+    <div class="form-actions">
+      <%= f.submit class: "btn btn btn-warning"%>
+    </div>
+      <% end %>
+    <div class="form-links">
+        <%= link_to 'Back',  user_path(current_user) %>
+        <div>
+          <%=link_to workspace_path, method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" } do %>
+          <i class="far fa-trash-alt"></i>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>
