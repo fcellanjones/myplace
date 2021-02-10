@@ -1,4 +1,6 @@
 class Workspace < ApplicationRecord
+  validates :terms_of_service, acceptance: true
+
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
