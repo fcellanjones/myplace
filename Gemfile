@@ -41,6 +41,9 @@ gem 'cloudinary', '~> 1.16.0'
 gem "algoliasearch-rails"
 gem 'pg_search', '~> 2.3.0'
 
+# getting a nice date/time format
+gem 'strftime'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
