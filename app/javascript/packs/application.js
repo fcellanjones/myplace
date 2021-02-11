@@ -36,11 +36,11 @@ import { imageSwapper } from '../helper_functions/imageSwapper';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
-  updatePrice();
   imageSwapper();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
   flatpickr("#booking_start_time", options);
   flatpickr("#booking_end_time", options);
+  updatePrice();
   const submitButton = document.getElementById('book-now');
     initSweetalert('#sweet-alert-demo', {
         title: "Thank you for your booking",

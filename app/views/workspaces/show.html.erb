@@ -12,11 +12,11 @@
       <div class="small-images">
         <% if @workspace.photos.attached? %>
           <% @workspace.photos.last(2).each_with_index do |photo, index| %>
-            <%= cl_image_tag photo.key, class: "img-small", id:"right-#{index}" %>
+            <%= cl_image_tag photo.key, class:"bottom-image img-small", id:"right-#{index}" %>
           <% end %>
         <% else %>
           <%= image_tag 'placeholder02.jpeg', class:"bottom-image img-small", id:"right-0" %>
-          <%= image_tag 'placeholder03.jpeg', class:"bottom-image img-small",  id:"right-1" %>
+          <%= image_tag 'placeholder03.jpeg', class:"bottom-image img-small", id:"right-1" %>
         <% end %>
       </div>
     </div>
@@ -74,7 +74,7 @@
     </div>
     <% if current_user != @workspace.user %>
       <div class= "rightside">
-        <div class= "bookingform p-3">
+        <div class= "bookingform">
           <h3>Reserve this space</h3>
           <%= simple_form_for [@workspace, Booking.new] do |f| %>
             <%= f.input :person_count %>
@@ -85,8 +85,7 @@
               <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
                 Total: £0
               </div>
-            <%= f.submit "", class: "btn btn-info", id:"book-now" %>
-            <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
+            <%= f.submit "Book Now!", class: "btn btn-warning", id:"book-now", id:"sweet-alert-demo" %>
         </div>
           <% end %>
       </div>
