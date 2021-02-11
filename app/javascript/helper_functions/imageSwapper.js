@@ -1,7 +1,7 @@
 const imageSwapper = () => {
   let bigImage = document.getElementById("img-large");
-  let topRight = document.getElementById("top-right");
-  let bottomRight = document.getElementById("bottom-right");
+  let topRight = document.getElementById("right-0");
+  let bottomRight = document.getElementById("right-1");
   topRight.addEventListener("click", (clickedItem) => {
     const currentSrc = clickedItem.srcElement.currentSrc;
     const bigImageSrc = bigImage.src;
