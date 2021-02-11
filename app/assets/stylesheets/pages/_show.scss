@@ -81,9 +81,9 @@
 }
 
 .bookingform {
-  width: 300px;
-  height: 450px;
-  margin-right: 35px;
+  width: 334px;
+  height: 480px;
+  margin-left: 50px;
   font-size: 16px;
   border: 1px solid #DB6400;
   border-radius: 3px;
@@ -98,11 +98,6 @@
 
 .input {
   padding: 30px;
-  color: ¢my-blue;
-}
-
-.hidden {
-  display: none;
 }
 
 .price-target {
@@ -111,6 +106,7 @@
   color: rgb(14,1,1);
   position: relative;
   bottom: 15px;
+  padding-top: 30px;
 }
 
 .price-target:hover {
