@@ -4,7 +4,24 @@ class PagesController < ApplicationController
   def home
   end
 
-  def show
-    render template: "pages/#{params[:page]}"
+  def about
+  end
+
+  def business
+  end
+
+  def hosts
+  end
+
+  def membership
+  end
+
+  def privacy
+  end
+
+  def support
+  end
+
+  def terms
   end
 end

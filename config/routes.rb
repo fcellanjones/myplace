@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  get "/pages/:page" => "pages#show"
+  get 'about', to: 'pages#about'
+  get 'business', to: 'pages#business'
+  get 'hosts', to: 'pages#hosts'
+  get 'membership', to: 'pages#membership'
+  get 'privacy', to: 'pages#privacy'
+  get 'support', to: 'pages#support'
+  get 'terms', to: 'pages#terms'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :workspaces do
