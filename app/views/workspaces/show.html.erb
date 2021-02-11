@@ -4,7 +4,7 @@
       <% if @workspace.photos.attached? %>
         <%= cl_image_tag @workspace.photos.first.key, id:"img-large" %>
       <% else %>
-        <%= image_tag 'placeholder01.jpeg', id:"img-large", class:"img-zoom-container" %>
+        <%= image_tag 'placeholder01.jpg', id:"img-large", class:"img-zoom-container" %>
     <% end %>
     </div>
 
@@ -15,8 +15,8 @@
             <%= cl_image_tag photo.key, class:"bottom-image img-small", id:"right-#{index}" %>
           <% end %>
         <% else %>
-          <%= image_tag 'placeholder02.jpeg', class:"bottom-image img-small", id:"right-0" %>
-          <%= image_tag 'placeholder03.jpeg', class:"bottom-image img-small", id:"right-1" %>
+          <%= image_tag 'placeholder02.jpg', class:"bottom-image img-small", id:"right-0" %>
+          <%= image_tag 'placeholder03.jpg', class:"bottom-image img-small", id:"right-1" %>
         <% end %>
       </div>
     </div>
