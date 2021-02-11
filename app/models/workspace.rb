@@ -6,6 +6,7 @@ class Workspace < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :workspace_amenities
   has_many :amenities, through: :workspace_amenities
+  has_many_attached :photos
   geocoded_by :postcode
   after_validation :geocode, if: :will_save_change_to_postcode?
 
