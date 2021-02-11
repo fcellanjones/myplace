@@ -1,0 +1,30 @@
+.business-title {
+  padding: 40px;
+
+  h2 {
+    color: #DB6400;
+    text-align: center;
+  }
+}
+
+.membership-card {
+  display: flex;
+  justify-content: space-between;
+  height: 370px;
+}
+
+.business-text {
+  height: 370px;
+  width: 400px;
+  margin-right: 100px;
+
+  h3 {
+  color: #007965;
+  }
+}
+
+.business-image img {
+    object-fit: fill;
+    height: 315px;
+    width: 540px;
+}
