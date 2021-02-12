@@ -85,7 +85,8 @@
               <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
                 Total: £0
               </div>
-            <%= f.submit "Book Now!", class: "btn btn-warning", id:"book-now", id:"sweet-alert-demo" %>
+            <%= f.submit "", class: "btn btn-info", id:"book-now", class: "hidden" %>
+            <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
         </div>
           <% end %>
       </div>
