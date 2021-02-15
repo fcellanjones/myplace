@@ -6,8 +6,8 @@
         <% else %>
           <%= fa_icon "user", class: "fa-8x" %>
         <% end %>
-        <div><%= link_to "Edit Profile", edit_user_registration_path %></div>
-        <div><%= link_to "Change Password", edit_user_password_path %></div>
+        <div class="profile-link"><%= link_to "Edit Profile", edit_user_registration_path %></div>
+        <div class="password-link"><%= link_to "Change Password", edit_user_password_path %></div>
       </div>
       <div class="top-right">
         <h2>Hi I'm <%= @user.first_name %>!</h2>
