@@ -28,6 +28,21 @@
   padding: 30px;
 }
 
+.host-avatar img {
+  width: 59px;
+  border-radius: 10%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 280px;
+  left: 148px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.host-avatar img:hover {
+  opacity: 1;
+}
+
 .leftside {
   flex-direction: column;
   width: 820px;
@@ -43,14 +58,12 @@
 
 .workspace-info h2 {
   color: #DB6400;
-  font-weight: bolder;
   font-size: 44px;
-  font-family: "Roboto";
+  font-weight: lighter;
 }
 
 .workspace-info p {
   font-size: 24px;
-  font-family: "Roboto";
   color: #56555D;
 }
 
