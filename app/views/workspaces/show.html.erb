@@ -29,7 +29,7 @@
           <h2> <%= @workspace.name %> </h2>
           <p> <%= @workspace.city %> <%= @workspace.postcode %> </p>
           <p> <% @workspace.average.floor.times do  %>
-            <i class="far fa-star"></i>
+            <%= fa_icon "star", class: "fa" %>
           <% end %></p>
         </div>
         <div class="price-text" data-rate="<%= @workspace.price %>" id="price">
@@ -42,21 +42,24 @@
             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Overview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="pills-amenities-tab" data-toggle="pill" href="#pills-amenities" role="tab" aria-controls="pills-amenities" aria-selected="false">Amenities</a>
+            <a class="nav-link" id="pills-host-tab" data-toggle="pill" href="#pills-host" role="tab" aria-controls="pills-host" aria-selected="false">About the host</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-selected="false">Reviews</a>
           </li>
         </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"> <%= @workspace.description %></div>
-            <div class="tab-pane fade" id="pills-amenities" role="tabpanel" aria-labelledby="pills-amenities-tab"> <%= @workspace.amenities %></div>
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <p><%= @workspace.description %></p>
+              <p><%= @workspace.amenities %></p>
+              </div>
+            <div class="tab-pane fade" id="pills-host" role="tabpanel" aria-labelledby="pills-host-tab">...</div>
             <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
               <% @workspace.reviews.each do |review| %>
                 <li class="list-group-item">
                   <% review.rating.to_i.times do %>
-                    <i class="far fa-star"></i>
-                  <% end %><br>
+                  <%= fa_icon "star", class: "fa" %>
+                  <% end %>
                   <%= review.content %><br>
                   <i><%= review.user.username%> - <%= review.created_at.strftime("%A, %b %d") %></i>
                   <% end %>
