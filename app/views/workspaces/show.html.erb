@@ -1,12 +1,14 @@
 <div class="container">
   <div class="top-container">
     <div class="top-leftside">
-      <% if @workspace.photos.attached? %>
-        <%= cl_image_tag @workspace.photos.first.key, id:"img-large" %>
-      <% else %>
-        <%= image_tag 'placeholder01.jpg', id:"img-large", class:"img-zoom-container" %>
-    <% end %>
-    </div>
+          <div class="large-image">
+            <% if @workspace.photos.attached? %>
+              <%= cl_image_tag @workspace.photos.first.key, id:"img-large" %>
+            <% else %>
+              <%= image_tag 'placeholder01.jpg', id:"img-large", class:"img-zoom-container" %>
+            <% end %>
+          </div>
+      </div>
 
     <div class="top-rightside">
       <div class="small-images">
@@ -23,6 +25,11 @@
   </div>
 
   <div class="second-container">
+    <div class="host-avatar">
+      <% if @workspace.user.photo.attached? %>
+        <%= image_tag @workspace.user.photo %>
+      <% end %>
+    </div>
     <div class="leftside">
      <div class="info">
         <div class="workspace-info">
@@ -51,7 +58,11 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <p><%= @workspace.description %></p>
-              <p><%= @workspace.amenities %></p>
+              <div class="list-amenities">
+                <% @workspace.amenities.each do |amenity| %>
+                 <ul class="tab-icons", style="padding: 0px;"><img src= <%= amenity_icon(amenity.name) %>/></ul>
+                <% end %>
+                </div>
               </div>
             <div class="tab-pane fade" id="pills-host" role="tabpanel" aria-labelledby="pills-host-tab">...</div>
             <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
