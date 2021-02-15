@@ -4,7 +4,7 @@
         <% if @user.photo.attached? %>
         <%= cl_image_tag(@user.photo.key, class: "avatar-large") %>
         <% else %>
-          <i class="far fa-user-circle fa-8x user-img"></i>
+          <%= fa_icon "user", class: "fa-8x" %>
         <% end %>
         <div><%= link_to "Edit Profile", edit_user_registration_path %></div>
         <div><%= link_to "Change Password", edit_user_password_path %></div>
