@@ -30,8 +30,23 @@
   line-height: 0;
 }
 
+.fa-home {
+  padding-top: 10px;
+}
+
+.text-link {
+  display: flex;
+  padding-top: 8px;
+  padding-right: 10px;
+}
+
 .nav-item .host-link {
     font-weight: bold;
+}
+
+#navbarDropdown {
+    color: grey;
+    padding-top: 12px;
 }
 
 

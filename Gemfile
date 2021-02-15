@@ -43,6 +43,7 @@ gem 'pg_search', '~> 2.3.0'
 
 # getting a nice date/time format
 gem 'strftime'
+gem 'font-awesome-rails'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
