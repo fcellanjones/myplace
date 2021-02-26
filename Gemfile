@@ -40,6 +40,7 @@ gem 'cloudinary', '~> 1.16.0'
 # geo-aware search
 gem "algoliasearch-rails"
 gem 'pg_search', '~> 2.3.0'
+gem 'pundit'
 
 # getting a nice date/time format
 gem 'strftime'

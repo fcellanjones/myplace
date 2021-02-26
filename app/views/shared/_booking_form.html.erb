@@ -1,0 +1,17 @@
+<div class= "rightside">
+  <div class= "bookingform">
+    <h3>Reserve this space</h3>
+    <%= simple_form_for [@workspace, Booking.new] do |f| %>
+      <%= f.input :person_count %>
+      <%= f.input :start_time, as: :string %>
+      <%= f.input :end_time, as: :string %>
+      <%=f.check_box :terms_of_service, required: true %> By ticking this box I agree to the terms and conditions
+      </br>
+    <div class="price-target" data-rate="<%= @workspace.price %>" id="total-price">
+      Total: £0
+    </div>
+      <%= f.submit "", class: "btn btn-info", id:"book-now", class: "hidden" %>
+      <button id="sweet-alert-demo" class="btn btn-info">Book Now!</button>
+    <% end %>
+  </div>
+</div>
