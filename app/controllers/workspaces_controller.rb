@@ -25,7 +25,6 @@ class WorkspacesController < ApplicationController
 
   def show
     @workspace = Workspace.find(params[:id])
-
     @marker = [{
         lat: @workspace.latitude,
         lng: @workspace.longitude

@@ -1,0 +1,14 @@
+<div class="account" style="background-color: white">
+  <div class="top-account">
+    <div class="top-left">
+      <h2>Property Details</h2>
+    <% @workspace.each do |workspace| %>
+      <p> Name: <%= workspace.name %> </p>
+      <p> Address: <%= workspace.first_line_address %> <%= workspace.city %> <%= workspace.postcode %> </p>
+      <p> Description: <%= workspace.description %> </p>
+    <% end %>
+    </div>
+  </div>
+    <h2>My Bookings</h2>
+    <%= render "host_bookings" %>
+</div>
