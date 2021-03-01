@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :workspaces do
-    resources :bookings, only: [:new, :create, :edit]
+    resources :bookings, only: [:new, :create, :edit, :update]
   end
 
   resources :users, only: [:show, :edit, :update]

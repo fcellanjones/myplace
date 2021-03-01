@@ -9,13 +9,21 @@
           <p><%= booking.person_count %> people</p>
         </div>
         <div class="links">
-          <h4><%= link_to "Get in touch", '#' %></h4>
-          <h4><%= link_to 'Edit', edit_workspace_booking_path(booking.workspace, booking) %></h4>
-          <h4><%= link_to 'Leave a Review', new_workspace_review_path(booking.workspace) %></h4>
+          <%= link_to "Get in touch", '#', class: "booking-button" %>
+          <% if booking.confirmed && booking.start_time < Date.today %>
+            <%= link_to 'Leave a Review', new_workspace_review_path(booking.workspace), class: "booking-button" %>
+          <% elsif booking.confirmed %>
+            <h4>Confirmed</h4>
+          <% elsif booking.confirmed == nil %>
+            <h4>Pending confirmation</h4>
+            <%= link_to 'Edit', edit_workspace_booking_path(booking.workspace, booking), class: "booking-button" %>
+          <% else %>
+            <h4>Booking rejected</h4>
+          <% end %>
         </div>
       <div class="address">
         <i class="fas fa-map-marker-alt"></i><h4><%= booking.workspace.first_line_address %> <%= booking.workspace.city %> <%= booking.workspace.postcode %></h4>
       </div>
   </div>
-      <% end %>
+  <% end %>
 </div>
