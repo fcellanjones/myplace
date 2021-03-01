@@ -19,11 +19,9 @@ Rails.application.routes.draw do
 
   resources :workspaces do
     resources :bookings, only: [:new, :create, :edit, :update]
+    resources :favorites, only: [:index, :create, :destroy]
+    resources :reviews, only: [:new, :create, :edit]
   end
 
   resources :users, only: [:show, :edit, :update]
-
-  resources :workspaces do
-    resources :reviews, only: [:new, :create, :edit]
-  end
 end

@@ -25,10 +25,23 @@
   </div>
 
   <div class="second-container">
-    <div class="host-avatar">
-      <% if @workspace.user.photo.attached? %>
-        <%= image_tag @workspace.user.photo %>
-      <% end %>
+    <div class="workspace-show-icons">
+      <div class="host-avatar">
+        <% if @workspace.user.photo.attached? %>
+          <%= image_tag @workspace.user.photo %>
+        <% end %>
+      </div>
+      <div class="workspace-fave">
+        <% if Favorite.where(workspace: @workspace, user: current_user).exists? %>
+            <%= link_to workspace_favorite_path(@workspace), class: "fav-a-pnk", method: :delete do %>
+            <p id="favourite"><%= fa_icon "heart" %> Favourited!</p>
+            <% end %>
+        <% else %>
+          <%= link_to workspace_favorites_path(@workspace), class: "fav-a-pnk", method: :post do %>
+          <p id="favourite"><%= fa_icon "heart" %> Save to favourites</p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
     <div class="leftside">
      <div class="info">

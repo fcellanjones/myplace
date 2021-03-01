@@ -29,6 +29,19 @@
   position: relative;
 }
 
+.workspace-show-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+
+  #favourite {
+  position: absolute;
+  bottom: 1292px;
+  left: 75px;
+  }
+}
+
 .host-avatar img {
   width: 59px;
   border-radius: 10%;
@@ -43,6 +56,7 @@
 .host-avatar img:hover {
   opacity: 1;
 }
+
 
 .leftside {
   flex-direction: column;
