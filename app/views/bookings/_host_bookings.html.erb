@@ -1,15 +1,19 @@
 <% unless @workspace.empty? %>
   <% @workspace_bookings.each do |booking| %>
+  <div class="host-bookings">
     <p><%= booking.user.first_name %> <%= booking.user.last_name %>
-      <%= booking.start_time.strftime("%d/%m/%y %H:%M") %>
-      <%= link_to "Accept booking", accept_booking_path(booking), method: :post, class: "btn btn-warning" %>
-      <%= link_to "Reject booking", reject_booking_path(booking), method: :post, class: "btn btn-warning" %>
-      </p>
+      <%= booking.start_time.strftime("%d/%m/%y %H:%M") %></p>
+      <% if booking.confirmed %>
+        <p>Booking confirmed</p>
+        <%= link_to "Cancel booking", reject_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
+      <% elsif booking.confirmed == nil%>
+        <%= link_to "Accept booking", accept_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
+        <%= link_to "Reject booking", reject_booking_path(booking), method: :post, class: "btn btn-warning" %>
+      <% else %>
+        <p>Booking rejected</p>
+        <%= link_to "Accept booking", accept_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
+    <% end %>
+    <%= link_to "Contact Customer", root_path, class: "btn btn-sm btn-warning" %>
+  </div>
   <% end %>
-  <% else %>
-<%# Otherwise, show a list of accepted bookings for the user %>
-<% @user_bookings.empty? %>
-  <h5 class="m-5">No bookings</h5>
-  <%= link_to "Find a venue", root_path, class: "btn" %>
 <% end %>
-

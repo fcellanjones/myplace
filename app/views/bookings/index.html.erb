@@ -1,14 +1,27 @@
-<div class="account" style="background-color: white">
-  <div class="top-account">
-    <div class="top-left">
+<div class="container" style="background-color: white">
+  <div class="host-property">
+    <div class="property-details-left">
       <h2>Property Details</h2>
-    <% @workspace.each do |workspace| %>
-      <p> Name: <%= workspace.name %> </p>
-      <p> Address: <%= workspace.first_line_address %> <%= workspace.city %> <%= workspace.postcode %> </p>
-      <p> Description: <%= workspace.description %> </p>
-    <% end %>
+      <% @workspace.each do |workspace| %>
+        <div class="property-detail"><p>Name</p>
+          <p><%= workspace.name %></p>
+        </div>
+        <div class="property-detail"><p>Address</p>
+          <p><%= workspace.first_line_address %> <%= workspace.city %> <%= workspace.postcode %></p>
+        </div>
+        <div class="property-detail"><p>Description</p>
+          <p><%= workspace.description %> </p>
+        </div>
+      <% end %>
+    </div>
+    <div class="property-calendar-right">
+      <h2 style="text-align: center">Calendar here</h2>
     </div>
   </div>
-    <h2>My Bookings</h2>
-    <%= render "host_bookings" %>
+  <div class="pb-2">
+    <div class="host-bookings-card">
+      <h2>My Bookings</h2>
+      <%= render "host_bookings" %>
+    </div>
+  </div>
 </div>

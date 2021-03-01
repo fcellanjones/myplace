@@ -1,5 +1,6 @@
 .account {
-  margin: 50px;
+  margin: 30px 50px;
+  display: flex;
 }
 
 .top-account {
@@ -31,9 +32,13 @@
   padding-left: 10px;
 }
 
+.property-link {
+  padding-left: 10px;
+}
+
 .top-right {
   height: 300px;
-  padding: 20px 0px 0px 60px;
+  padding: 70px 0px 0px 60px;
 
   h2 {
     color: #DB6400;
@@ -45,6 +50,14 @@
     padding-top: 30px;
     font-size: 20px;
   }
+}
+
+.bottom {
+  margin: 0 50px;
+}
+
+.tab-content {
+  padding: 10px;
 }
 
 #account-tab {
@@ -74,8 +87,19 @@
 }
 
 .links {
+  padding: 2px;
   display: flex;
   justify-content: space-around;
+
+  h4 {
+    color: #007965;
+    font-weight: bold;
+  }
+}
+
+.booking-button {
+  text-decoration: none;
+  color: #DB6400;
 }
 
 .address {
