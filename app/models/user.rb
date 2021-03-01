@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :workspaces
   has_many :bookings, dependent: :destroy
   has_many :reviews
+  has_many :favorites
   has_one_attached :photo
 
   devise :database_authenticatable, :registerable,
