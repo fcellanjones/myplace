@@ -79,7 +79,12 @@
                 <% end %>
                 </div>
               </div>
-            <div class="tab-pane fade" id="pills-host" role="tabpanel" aria-labelledby="pills-host-tab">...</div>
+            <div class="tab-pane fade" id="pills-host" role="tabpanel" aria-labelledby="pills-host-tab">
+              <h4>Host name</h4>
+               <p><%= @workspace.user.first_name %> <%= @workspace.user.last_name %></p>
+              <h4>About your host</h4>
+               <p><%= @workspace.user.about %></p>
+            </div>
             <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
               <% @workspace.reviews.each do |review| %>
                 <li class="list-group-item">

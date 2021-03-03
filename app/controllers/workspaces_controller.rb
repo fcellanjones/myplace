@@ -39,6 +39,7 @@ class WorkspacesController < ApplicationController
     @workspace = Workspace.create(strong_params)
     @workspace.user = current_user
     if @workspace.save
+      flash[:notice] = "#{@workspace.name} has been created!"
       redirect_to workspace_path(@workspace)
     else
       render :new
