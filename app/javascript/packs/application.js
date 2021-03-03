@@ -32,9 +32,10 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { updatePrice } from '../helper_functions/updatePrice';
-//import { imageSwapper } from '../helper_functions/imageSwapper';
+import { imageSwapper } from '../helper_functions/imageSwapper';
 
 document.addEventListener('turbolinks:load', () => {
+  imageSwapper();
   initMapbox();
   updatePrice();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
