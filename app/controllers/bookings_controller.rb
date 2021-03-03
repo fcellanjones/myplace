@@ -26,7 +26,6 @@ class BookingsController < ApplicationController
     @booking.workspace = @workspace
     @booking.user = current_user
     if @booking.save!
-      flash[:notice] = "Your booking is confirmed"
       redirect_to user_path(@booking.user)
     else
       render "workspaces/show"

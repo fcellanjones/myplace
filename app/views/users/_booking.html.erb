@@ -1,12 +1,18 @@
 <div class="booking-card">
   <% @bookings.each do |booking| %>
+  <%= link_to workspace_path(booking.workspace), class: "workspace-link" do %>
     <div class="workspace-card">
       <img src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxob21lJTIwb2ZmaWNlfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60" alt="airy desk in bedroom">
       <h3 class="booking-name"><%= booking.workspace.name %></h3>
         <div class="booking-details">
           <p><%= booking.start_time.strftime('%a %e %B %l:%M')%> -
               <%= booking.end_time.strftime('%a %e %B %l:%M')%></p>
-          <p><%= booking.person_count %> people</p>
+          <p><%= booking.person_count %>
+          <% if booking.person_count > 1%>
+            guests</p>
+          <% else %>
+            guest</p>
+          <% end %>
         </div>
         <div class="links">
           <%= link_to "Get in touch", '#', class: "booking-button" %>
@@ -25,5 +31,6 @@
         <i class="fas fa-map-marker-alt"></i><h4><%= booking.workspace.first_line_address %> <%= booking.workspace.city %> <%= booking.workspace.postcode %></h4>
       </div>
   </div>
+  <% end %>
   <% end %>
 </div>

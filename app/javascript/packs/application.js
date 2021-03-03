@@ -42,8 +42,8 @@ document.addEventListener('turbolinks:load', () => {
   flatpickr("#booking_end_time", options);
   const submitButton = document.getElementById('book-now');
     initSweetalert('#sweet-alert-demo', {
-        title: "Thank you for your booking",
-        text: "See your booking on your account page",
+        title: "Thank you for your booking.",
+        text: "The host will confirm your booking shortly.",
       }, (value) => {
         submitButton.click();
       });
