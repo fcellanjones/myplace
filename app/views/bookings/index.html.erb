@@ -21,7 +21,11 @@
   <div class="pb-2">
     <div class="host-bookings-card">
       <h2>My Bookings</h2>
-      <%= render "host_bookings" %>
+      <% if @workspace_bookings.empty? %>
+        <p>No Bookings yet</p>
+      <% else %>
+        <%= render "host_bookings" %>
+      <% end %>
     </div>
   </div>
 </div>
