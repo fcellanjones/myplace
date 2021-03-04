@@ -35,7 +35,6 @@ import { updatePrice } from '../helper_functions/updatePrice';
 import { imageSwapper } from '../helper_functions/imageSwapper';
 
 document.addEventListener('turbolinks:load', () => {
-  imageSwapper();
   initMapbox();
   updatePrice();
   const options = {enableTime: true, altFormat: "d-m-Y h:i K", altInput: true};
@@ -48,4 +47,5 @@ document.addEventListener('turbolinks:load', () => {
       }, (value) => {
         submitButton.click();
       });
+  imageSwapper();
 });
