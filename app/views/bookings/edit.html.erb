@@ -1,5 +1,5 @@
 <div class="container" style="width: 500px">
-    <div class="form-container">
+  <div class="form-container">
     <h2>Edit your Booking</h2>
       <div style="display: flex">
         <h3><%= @booking.workspace.name %></h3>
@@ -10,13 +10,13 @@
           <%= f.input :person_count %>
           <%= f.input :start_time %>
           <%= f.input :end_time %>
-      </div>
       </br>
-    <div class="form-actions">
-      <%= f.submit "Update booking", class: "btn btn btn-warning"%>
-    </div>
-    <% end %>
-    <div class="form-links">
+        <div class="form-actions">
+          <%= f.submit "Update booking", class: "btn btn btn-warning"%>
+        </div>
+      </div>
+      <% end %>
+      <div class="form-links">
         <%= link_to 'Back',  user_path(current_user) %>
         <div>
           <%=link_to workspace_path, method: :delete, data: { confirm: "Are you sure you want to cancel this booking?" } do %>
