@@ -3,25 +3,25 @@
     <h2>Host a space</h2>
     <div class="form-inputs">
       <%= simple_form_for @workspace do |f| %>
-      <%= f.input :name %>
-      <%= f.input :description %>
-      <%= f.input :capacity %>
-      <%= f.input :price %>
-      <%= f.input :first_line_address %>
-      <%= f.input :city %>
-      <%= f.input :postcode %>
-      <%= f.association :amenities,
-                                collection: Amenity.all, as: :check_boxes,
-                                wrapper: :vertical_collection_inline,
-                                input_html: { class: "tag-selector" },
-                                item_wrapper_class: 'tag-item'%>
-      <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-      <%=f.check_box :terms_of_service, required: true %> By ticking this box I agree to the terms and conditions
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :capacity %>
+        <%= f.input :price %>
+        <%= f.input :first_line_address %>
+        <%= f.input :city %>
+        <%= f.input :postcode %>
+        <%= f.association :amenities,
+                                  collection: Amenity.all, as: :check_boxes,
+                                  wrapper: :vertical_collection_inline,
+                                  input_html: { class: "tag-selector" },
+                                  item_wrapper_class: 'tag-item'%>
+        <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+        <%=f.check_box :terms_of_service, required: true %> By ticking this box I agree to the terms and conditions
+      <div class="form-actions">
+        <%= f.submit "Create Workspace", class: "btn btn-warning" %>
+        <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
+      </div>
     </div>
-    <div class="form-actions">
-      <%= f.submit "Create Workspace", class: "btn btn-warning" %>
-      <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
-    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
