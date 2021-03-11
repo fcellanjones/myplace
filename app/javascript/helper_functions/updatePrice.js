@@ -24,12 +24,10 @@ const updatePrice = () => {
   }
       calculatedPrice = (Date.parse(endTime) -  Date.parse(startTime)) / 3600000 * parseInt(hourlyRate) * parseInt(personCount)
       console.log(Date.parse(endTime), Date.parse(startTime));
-    }
 
     let totalPrice = document.getElementById("total-price")
 
     totalPrice.innerHTML = `Total: £${calculatedPrice}`
-
     }
   }
 
