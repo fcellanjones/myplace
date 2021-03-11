@@ -18,17 +18,19 @@ const updatePrice = () => {
       // console.log(startTime, endTime, personCount, hourlyRate);
     let calculatedPrice = 0
 
-  if ( startTime.length > 0 && endTime.length > 0 && personCount.length > 0) {
-
+    if ( startTime.length > 0 && endTime.length > 0 && personCount.length > 0) {
     calculatedPrice = (Date.parse(endTime) -  Date.parse(startTime)) / 3600000 * parseInt(hourlyRate) * parseInt(personCount)
       // console.log(Date.parse(endTime), Date.parse(startTime));
   }
+      calculatedPrice = (Date.parse(endTime) -  Date.parse(startTime)) / 3600000 * parseInt(hourlyRate) * parseInt(personCount)
+      console.log(Date.parse(endTime), Date.parse(startTime));
+    }
 
-  let totalPrice = document.getElementById("total-price")
+    let totalPrice = document.getElementById("total-price")
 
-  totalPrice.innerHTML = `Total: £${calculatedPrice}`
+    totalPrice.innerHTML = `Total: £${calculatedPrice}`
 
+    }
   }
-}
 
 export {updatePrice}

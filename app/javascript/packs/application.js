@@ -33,6 +33,7 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 import { initMapbox } from '../plugins/init_mapbox';
 import { updatePrice } from '../helper_functions/updatePrice';
 import { imageSwapper } from '../helper_functions/imageSwapper';
+import { termsConditions } from '../helper_functions/termsConditions'
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
@@ -48,4 +49,5 @@ document.addEventListener('turbolinks:load', () => {
         submitButton.click();
       });
   imageSwapper();
+  // termsConditions();
 });

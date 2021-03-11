@@ -2,7 +2,7 @@
   <div class="form-container">
     <h2>Host a space</h2>
     <div class="form-inputs">
-      <%= simple_form_for @workspace do |f| %>
+      <%= simple_form_for @workspace, html: {id: 'create-form'} do |f| %>
         <%= f.input :name %>
         <%= f.input :description %>
         <%= f.input :capacity %>
@@ -16,7 +16,7 @@
                                   input_html: { class: "tag-selector" },
                                   item_wrapper_class: 'tag-item'%>
         <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-        <%=f.check_box :terms_of_service, required: true %> By ticking this box I agree to the terms and conditions
+        <%=f.check_box :terms_of_service %> <p>By ticking this box I agree to the terms and conditions<p>
       <div class="form-actions">
         <%= f.submit "Create Workspace", class: "btn btn-warning" %>
         <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
