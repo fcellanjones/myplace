@@ -28,14 +28,15 @@
   background-color: white;
   margin-left: 16px;
   width: 666px;
-  height: 160px;
+  height: 100px;
 
   .btn {
-    margin-top: 70px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     margin-right: 10px;
-    padding: 10px 30px 10px 30px;
+    padding: 6px 25px 6px 25px;
     border-radius: 50rem;
-    color: white;
+    color: white;;
   }
 }
 
@@ -43,6 +44,7 @@
   display: flex;
   border-bottom: 1px solid hsla(0,0%,59.2%,.3);
   height: 46px;
+  margin-left: 25px;
 }
 
 .filter-flex {

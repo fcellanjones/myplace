@@ -9,7 +9,7 @@ const termsConditions = () => {
     } else {
       submitButton.disabled = false;
     }
-  }
+  };
 
 terms.addEventListener('click', enableButton);
 };
