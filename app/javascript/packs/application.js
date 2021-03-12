@@ -49,5 +49,5 @@ document.addEventListener('turbolinks:load', () => {
         submitButton.click();
       });
   imageSwapper();
-  // termsConditions();
+  termsConditions();
 });
