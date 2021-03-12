@@ -1,4 +1,5 @@
 class Workspace < ApplicationRecord
+  validates :name, :description, :capacity, :price, :city, :postcode, presence: true
   validates :terms_of_service, acceptance: true
 
   belongs_to :user

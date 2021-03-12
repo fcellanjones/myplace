@@ -1,23 +1,16 @@
-// const tosCheckbox = document.querySelector('#workspace_terms_of_service');
-// const submitButton = document.querySelector('.btn');
+const termsConditions = () => {
+  const submitButton = document.querySelector('#tos_btn');
+  const terms = document.querySelector("#tos_check")
 
-// const checkboxChecked = (input) => {
-  // return input.checked;
-// };
+  const enableButton = () => {
+      if (terms.checked == false) {
+      submitButton.disabled = true;
+    } else {
+      submitButton.disabled = false;
+    }
+  }
+terms.addEventListener('click', enableButton);
+};
 
 
-// const tosIsValid = checkboxChecked(tosCheckbox);
- // if (tosIsValid) {
-//     submitButton.disabled = false;
-//   } else {
-//     submitButton.disabled = true;
-//   }
-// };
-
-// allInputs.forEach((input) => {
-//   input.addEventListener('blur', enableButton);
-// });
-// tosCheckbox.addEventListener('click', enableButton);
-
-      // event.preventDefault()}
-// export { termsConditions }
+export { termsConditions }
