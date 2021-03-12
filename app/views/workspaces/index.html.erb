@@ -8,13 +8,8 @@
             <%= f.input :search_city, class: "form-control rounded-left", placeholder: "Area or Postcode", label: false %>
             <%= f.input :search_distance, class: "form-control", placeholder: "Km radius", label: false  %>
           </div>
-          <div class="amenities-line form-inline">
-            <%= f.input :amenities, as: :check_boxes, collection: Amenity.pluck(:name), input_html: { multiple: true }, label: false, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
-          </div>
         </div>
-        <div>
-          <%= f.submit "Filter", class: "btn btn-info"%>
-        </div>
+        <%= f.submit "Search", class: "btn btn-warning"%>
       </div>
     <% end %>
     </div>
