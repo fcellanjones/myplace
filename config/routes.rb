@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'membership', to: 'pages#membership'
   get 'privacy', to: 'pages#privacy'
   get 'support', to: 'pages#support'
+  get 'guidelines', to: 'pages#guidelines'
   get 'terms', to: 'pages#terms'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
