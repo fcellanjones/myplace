@@ -14,7 +14,7 @@ puts "Destroyed!"
 
 puts "Creating amenities..."
 
-amenities = Amenity.create!([{ name: 'Speedy Wifi' }, { name: 'Sockets available' }, { name: 'Tea and Coffee' }, { name: 'Safe space' }, { name: 'Quiet spaces' }, {name: 'Screen available'}])
+amenities = Amenity.create!([{ name: 'Shared workspace' }, { name: 'Quiet working' }, { name: 'Seperate room' }, { name: 'Table and chair' }, { name: 'Speedy Wifi' }, {name: 'Women-only space'}, {name: "Coffee and tea available"}, {name: "Kitchen available"}, {name: "Dog friendly"}, {name: "Covid-secure"}])
 
 puts "...Amenities created!"
 
