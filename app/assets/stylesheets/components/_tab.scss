@@ -33,8 +33,16 @@ a:hover {
   display: flex;
   margin: 40px 5px 5px 5px;
   justify-content: space-between;
+
+  p {
+    margin-top: 1rem;
+  }
 }
 
 .tab-icons {
   padding: 0px;
+
+  .fas {
+    font-size: 35px;
+  }
 }
