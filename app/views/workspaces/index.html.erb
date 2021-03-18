@@ -28,7 +28,7 @@
           <div class= "card-icons">
             <!-- non static amenities here -->
             <% workspace.amenities.each do |amenity| %>
-              <%= image_tag amenity_icon(amenity.name), alt: "icons" %>
+              <%= link_to amenity_icon(amenity.name), alt: "icons", class: "hidden" %>
             <% end  %>
           </div>
           <div class="icon-postcode">

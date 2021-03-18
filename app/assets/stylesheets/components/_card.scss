@@ -74,9 +74,15 @@ h5 {
 
 .card-icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-bottom: 5px;
-    color: rgba(0,0,0,0.7);
+
+  .fas {
+    width: 15px;
+    height: 15px;
+    padding: 20px 62px 0px 48px;
+    font-size: 30px;
+  }
 }
 
 .icon-postcode {
