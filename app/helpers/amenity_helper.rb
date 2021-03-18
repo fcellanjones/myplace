@@ -1,28 +1,28 @@
 module AmenityHelper
-   include FontAwesome::Rails::IconHelper
+include FontAwesome::Rails::IconHelper
 
   def amenity_icon(name)
     case name
     when "Shared workspace"
-      "https://img.icons8.com/wired/64/000000/wifi-logo.png"
+      fa_icon("building")
     when "Quiet working"
-      "https://img.icons8.com/wired/64/000000/plug.png"
+      fa_icon("volume-mute")
     when "Seperate room"
-      "https://img.icons8.com/wired/64/000000/tea.png"
+      fa_icon("laptop-house")
     when "Table and chair"
-      "https://img.icons8.com/dotty/80/000000/laptop.png"
+      fa_icon("chair")
     when "Speedy Wifi"
-      "https://image.shutterstock.com/image-vector/open-palms-female-silhouette-glyph-260nw-723726370.jpg"
+      fa_icon("wifi")
     when "Women-only space"
-      "https://img.icons8.com/ios/2x/quiet.png"
+      fa_icon("female")
     when "Coffee and tea available"
-      "https://img.icons8.com/dotty/80/000000/laptop.png"
+      fa_icon("coffee")
     when "Kitchen available"
-      "https://img.icons8.com/dotty/80/000000/laptop.png"
+      fa_icon("utensils")
     when "Dog friendly"
-      "https://img.icons8.com/dotty/80/000000/laptop.png"
+      fa_icon("dog")
     when "Covid-secure"
-      "https://img.icons8.com/dotty/80/000000/laptop.png"
+      fa_icon("hand-sparkles")
     end
   end
 end
