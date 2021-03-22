@@ -14,13 +14,13 @@
   border-radius: 50rem;
   padding: 5px 10px 5px 10px;
   background-color: #ECEAFC;
-  color: #007965;
-  border: 1px solid #007965;
+  color: $my-green;
+  border: 1px solid $my-green;
   margin: 4px 20px 4px 6px;
 }
 
 .tag-selector:checked + label {
-  background-color: #007965;
+  background-color: $my-green;
   color: white;
 }
 
