@@ -51,7 +51,7 @@ p {
 }
 
 .workspace-name {
-  color: #DB6400;
+  color: $my-orange;
   padding-left: 16px;
   padding-top: 17px;
   padding-bottom: 10px;
@@ -64,8 +64,8 @@ h5 {
   line-height: 40px;
   border-radius: 50%;
   background-color: white;
-  color: #007965;
-  border: 2px solid #007965;
+  color: $my-green;
+  border: 2px solid $my-green;
   position: absolute;
   text-align: center;
   top: 178px;
@@ -86,7 +86,7 @@ h5 {
   display: flex;
   align-items: center;
   padding-left: 18px;
-  color: #DB6400;
+  color: $my-orange;
   padding-top: 20px;
 }
 

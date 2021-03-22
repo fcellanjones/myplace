@@ -70,7 +70,7 @@
 }
 
 .workspace-info h2 {
-  color: #DB6400;
+  color: $my-orange;
   font-size: 44px;
   font-weight: lighter;
 }
@@ -84,8 +84,8 @@
   padding: 20px 24px;
   border-radius: 50%;
   background-color: white;
-  color: #007965;
-  border: 2px solid #007965;
+  color: $my-green;
+  border: 2px solid $my-green;
   position: absolute;
   text-align: center;
   top: 475px;
@@ -110,7 +110,7 @@
   height: 480px;
   margin-left: 50px;
   font-size: 16px;
-  border: 1px solid #DB6400;
+  border: 1px solid $my-orange;
   border-radius: 3px;
   background-color: white;
   text-align: center;

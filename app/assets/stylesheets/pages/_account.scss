@@ -41,7 +41,7 @@
   padding: 70px 0px 0px 60px;
 
   h2 {
-    color: #DB6400;
+    color: $my-orange;
   }
 
   h3 {
@@ -80,7 +80,7 @@
 }
 
 .booking-name {
-  color: #007965;
+  color: $my-green;
   padding-top: 10px;
   text-align: center;
   font-size: 18px;
@@ -92,14 +92,14 @@
   justify-content: space-around;
 
   h4 {
-    color: #007965;
+    color: $my-green;
     font-weight: bold;
   }
 }
 
 .booking-button {
   text-decoration: none;
-  color: #DB6400;
+  color: $my-orange;
 }
 
 .address {
@@ -112,5 +112,5 @@
 }
 
 .fas {
-  color:#007965;
+  color:$my-green;
 }
