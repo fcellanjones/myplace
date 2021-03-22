@@ -19,15 +19,12 @@
   margin: 0px;
   margin-left: 30px;
   margin-bottom: 0px;
-}
 
-.logo h2 {
-  color: $my-orange;
-}
-
-.logo p {
-  color: $my-green;
-  line-height: 0;
+  img {
+  height: 45px;
+  width: 170px;
+  object-fit: fill;
+  }
 }
 
 .fa-home {
