@@ -19,15 +19,13 @@
   margin: 0px;
   margin-left: 30px;
   margin-bottom: 0px;
-}
 
-.logo h2 {
-  color: #DB6400;
-}
-
-.logo p {
-  color: #007965;
-  line-height: 0;
+  img {
+  height: 55px;
+  width: 224px;
+  object-fit: cover;
+  background: transparent;
+  }
 }
 
 .fa-home {
