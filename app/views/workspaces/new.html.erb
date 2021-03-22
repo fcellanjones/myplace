@@ -16,9 +16,9 @@
                                   input_html: { class: "tag-selector" },
                                   item_wrapper_class: 'tag-item'%>
         <%= f.input :photos, as: :file, input_html: { multiple: true }%>
-        <%=f.check_box :terms_of_service, id:"tos_check" %> <p>By ticking this box I agree to the terms and conditions<p>
+        <%=f.check_box :terms_of_service, id:"tos_check", required: true %> <p>By ticking this box I agree to the terms and conditions<p>
       <div class="form-actions">
-        <%= f.submit "Create Workspace", class: "btn btn-warning", id: "tos_btn" %>
+        <%= f.submit "Create Workspace", onclick: "checkTerms();", class: "btn btn-warning", id: "tos_btn" %>
         <%= link_to 'Back', workspaces_path, class: "btn btn-info"%>
       </div>
     </div>

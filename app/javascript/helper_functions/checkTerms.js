@@ -1,4 +1,4 @@
-const termsConditions = () => {
+const checkTerms = () => {
   const submitButton = document.querySelector('#tos_btn');
   const terms = document.querySelector("#tos_check")
 
@@ -11,7 +11,11 @@ const termsConditions = () => {
     }
   };
 
+
+
 terms.addEventListener('click', enableButton);
 };
 
-export { termsConditions }
+export { checkTerms }
+
+
