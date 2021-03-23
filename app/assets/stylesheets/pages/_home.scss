@@ -2,7 +2,6 @@
 .large-card {
   justify-content: space-evenly;
   text-align: center;
-  background-color: #f9f9f9;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -11,19 +10,48 @@
   h2 {
     line-height: 1.5;
     padding-top: 10px;
-    color: rgb(120, 120, 120);
+    color: #393e46;
+    font-weight: bold;
   }
 
   p {
     line-height: 1.5;
     padding: 2px;
+    color: grey;
+    font-weight: bold;
+  }
+}
+
+#icons-list {
+  background-color: white;
+  padding-bottom: 40px;
+
+  .btn-warning {
+    margin-top: 20px;
+  }
+}
+
+#second-carousel {
+  background-color: black;
+
+  .carousel-inner {
+    top: -45px;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  .btn-warning {
+    background-color: $my-green;
+    border: none;
+    margin-bottom: 30px;
   }
 }
 
 .icon-row {
   display: flex;
   justify-content: space-evenly;
-  padding: 30px;
 
   .fa {
     width: 200px;
