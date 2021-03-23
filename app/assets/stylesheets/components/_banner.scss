@@ -12,7 +12,7 @@
 .banner-text {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-shadow: 4px 1px 3px rgba(0,0,0,0.7);
   font-size: 48px;
   font-weight: bolder;
   text-align: center;
@@ -20,10 +20,11 @@
 
 .banner-text h3 {
   margin-top: 30px;
-  font-size: 40px;
+  font-size: 50px;
   justify-content: center;
   font-weight: bolder;
-  color: white;
+  color: #FFFFFF;
+  margin-top: 175px;
 }
 
 .button {
@@ -47,7 +48,7 @@
   width: 100%;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   margin-left: 641px;
 }
 

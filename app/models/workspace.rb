@@ -22,4 +22,5 @@ class Workspace < ApplicationRecord
   def average
     reviews.average(:rating).to_f.round(1)
   end
+  # use regex to return first half of postcode for show page
 end
