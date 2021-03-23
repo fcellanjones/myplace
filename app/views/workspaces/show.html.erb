@@ -74,10 +74,10 @@
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <h4>About the space</h4>
                 <p><%= @workspace.description %></p>
-                <h4>List of amenities</h4>
+                <h4>Amenities</h4>
               <div class="list-amenities">
                 <% @workspace.amenities.each do |amenity| %>
-                 <ul class="tab-icons"><%= amenity_icon(amenity.name) %></ul>
+                 <ul class="tab-icons"><%= amenity_icon(amenity.name) %> <%= amenity.name %></ul>
                 <% end %>
                 </div>
               </div>
