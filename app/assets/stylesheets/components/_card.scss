@@ -58,18 +58,27 @@ p {
   font-size: 24px;
 }
 
-h5 {
-  width: 43px;
-  height: 43px;
-  line-height: 40px;
+.card-price {
+  padding: 10px 15px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: white;
   color: $my-green;
   border: 2px solid $my-green;
   position: absolute;
   text-align: center;
-  top: 178px;
-  right: 14px;
+  top: 165px;
+  right: 5px;
+
+  h5 {
+    margin: 0px;
+  }
+
+  p {
+    padding: 0px;
+    font-size: 10px;
+  }
 }
 
 .card-icons {
