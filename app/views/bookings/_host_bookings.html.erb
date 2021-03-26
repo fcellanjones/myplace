@@ -8,7 +8,7 @@
         <%= link_to "Cancel booking", reject_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
       <% elsif booking.confirmed == nil%>
         <%= link_to "Accept booking", accept_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
-        <%= link_to "Reject booking", reject_booking_path(booking), method: :post, class: "btn btn-warning" %>
+        <%= link_to "Reject booking", reject_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
       <% else %>
         <p>Booking rejected</p>
         <%= link_to "Accept booking", accept_booking_path(booking), method: :post, class: "btn btn-sm btn-warning" %>
