@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "destroying seed files..."
 
+Workspace.destroy_all
 WorkspaceAmenity.destroy_all
 Amenity.destroy_all
 
