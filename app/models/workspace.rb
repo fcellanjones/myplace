@@ -1,6 +1,7 @@
 class Workspace < ApplicationRecord
   validates :name, :description, :capacity, :price, :city, :postcode, presence: true
   validates :terms_of_service, acceptance: true
+  validates :name, length: 5..28
 
   belongs_to :user
   has_many :bookings, dependent: :destroy
