@@ -12,6 +12,7 @@
 
 .top-left {
   padding-top: 20px;
+  width: 160px;
 
   .fa-user {
     font-size: 80px;
@@ -20,8 +21,11 @@
 }
 
 .avatar-large {
-  width: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  object-fit: cover;
+  margin-left: 20px;
 }
 
 .profile-link {
