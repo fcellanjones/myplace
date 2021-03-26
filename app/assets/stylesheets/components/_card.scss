@@ -53,7 +53,7 @@ p {
 .workspace-name {
   color: $my-orange;
   padding-left: 16px;
-  padding-top: 17px;
+  padding-top: 25px;
   padding-bottom: 10px;
   font-size: 24px;
 }
@@ -94,19 +94,20 @@ p {
 .icon-postcode {
   display: flex;
   align-items: center;
-  padding-left: 18px;
+  margin: 16px 0px 0px 16px;
   color: $my-orange;
   padding-top: 20px;
+
+  .fa-map-marker-alt {
+    padding-top: 6px;
+  }
 }
 
-.fa-thumbtack:before {
-    font-size: 25px;
-    justify-content: center;
-  }
+
 
 .address-text {
   margin-top: 7px;
-  margin-left: 10px;
+  margin-left: 5px;
   display: flex;
 
   p {

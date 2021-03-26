@@ -10,14 +10,20 @@
   height: 100px;
   padding: 0px 50px;
   color: #000000;
+
+  .fab {
+    color: $my-green;
+    padding: 2px;
+  }
 }
 
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
-  color: grey;
+  color: #393e46;
   text-decoration: none;
   font-size: 16px;
   padding: 0px 10px;
