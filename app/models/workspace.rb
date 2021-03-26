@@ -17,7 +17,7 @@ class Workspace < ApplicationRecord
   pg_search_scope :search_by_location,
   against: [ :city, :postcode ],
       using: {
-        tsearch: { prefix: true } # <-- now `superman batm` will return something!
+        tsearch: { prefix: true }
     }
 
   def average
