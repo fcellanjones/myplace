@@ -31,4 +31,4 @@ const updatePrice = () => {
     }
   }
 
-export {updatePrice}
+export { updatePrice };

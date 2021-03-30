@@ -11,8 +11,6 @@ const checkTerms = () => {
     }
   };
 
-
-
 terms.addEventListener('click', enableButton);
 };
 
