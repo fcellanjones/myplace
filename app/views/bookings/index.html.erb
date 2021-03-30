@@ -12,10 +12,11 @@
         <div class="property-detail"><p>Description</p>
           <p><%= workspace.description %> </p>
         </div>
+        <%= link_to 'Edit', edit_workspace_path(@workspace), class: "btn btn-warning btn-host"%>
       <% end %>
     </div>
     <div class="property-calendar-right">
-      <h2 style="text-align: center">Calendar here</h2>
+      <!-- <h2 style="text-align: center">Calendar here</h2> -->
     </div>
   </div>
   <div class="pb-2">
